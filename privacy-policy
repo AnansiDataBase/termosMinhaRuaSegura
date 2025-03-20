@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Política de Privacidade - Minha Rua Segura</title>
+    <style>
+        body { 
+            padding: 25px 40px; 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        h3 { color: #2c3e50; margin: 20px 0 10px; }
+        ul { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 8px; }
+        p { margin: 10px 0; }
+        .aviso-final { background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .data-atualizacao { text-align: right; font-style: italic; color: #666; }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Política de Privacidade da Extensão "Minha Rua Segura"</h1>
+
+    <h2>1. Coleta de Dados</h2>
+    <p>A extensão <strong>Minha Rua Segura</strong> não coleta dados pessoais dos usuários. Todos os dados exibidos são obtidos de fontes públicas disponibilizadas pela <strong>Secretaria de Segurança Pública do Estado de São Paulo (SSP-SP)</strong>.</p>
+
+    <h2>2. Uso dos Dados</h2>
+    <p>Os dados são utilizados exclusivamente para fornecer informações sobre furtos em determinadas áreas. Não compartilhamos, vendemos ou utilizamos os dados para qualquer outro propósito.</p>
+
+    <h2>3. Segurança dos Dados</h2>
+    <p>Embora não coletemos dados pessoais, estamos comprometidos em garantir a segurança e a privacidade dos usuários. Recomendamos que os usuários sempre verifiquem as informações com fontes oficiais.</p>
+
+    <h2>4. Alterações na Política de Privacidade</h2>
+    <p>Esta política de privacidade pode ser atualizada periodicamente. Recomendamos que os usuários revisem esta página regularmente para se manterem informados sobre como estamos protegendo suas informações.</p>
+
+    <div class="aviso-final">
+        <h3>Avisos Finais</h3>
+        <ol>
+            <li>A extensão <strong>não modifica</strong> o site do Quinto Andar, apenas exibe dados complementares.</li>
+            <li>A SSP-SP <strong>não endossa ou valida</strong> esta extensão - os dados são utilizados conforme disponibilizados publicamente.</li>
+            <li>Para decisões críticas, <strong>sempre consulte registros oficiais</strong> e profissionais qualificados.</li>
+        </ol>
+    </div>
+
+    <p class="data-atualizacao">Última atualização: 02/03/2025</p>
+</body>
+</html>
