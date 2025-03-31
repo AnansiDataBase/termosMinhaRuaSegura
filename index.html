@@ -2,125 +2,240 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Informações</title>
+    <title>Termos de Uso - Minha Rua Segura</title>
     <style>
+        :root {
+          --green: #00ff9d;
+          --dark-green: #00cc7a;
+          --black: #121212;
+          --dark-gray: #1e1e1e;
+          --medium-gray: #333;
+          --light-gray: #e0e0e0;
+          --white: #f5f5f5;
+        }
+
         body { 
-            padding: 25px 40px; 
-            font-family: Arial, sans-serif; 
+            margin: 0;
+            font-family: 'IBM Plex Mono', monospace, 'Segoe UI', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 0;
         }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; }
-        h3 { color: #2c3e50; margin: 20px 0 10px; }
-        ul { margin: 15px 0 15px 30px; }
-        li { margin-bottom: 8px; }
-        p { margin: 10px 0; }
-        .aviso-final { background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0; }
-        .data-atualizacao { text-align: right; font-style: italic; color: #666; }
-        a { color: #2980b9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        .terminal-theme {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        .main-content {
+          flex: 1;
+          padding: 2rem;
+          max-width: 800px;
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .terminal-window {
+          background-color: var(--dark-gray);
+          border: 1px solid var(--medium-gray);
+          border-radius: 8px;
+          margin: 2rem 0;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 255, 157, 0.1);
+        }
+
+        .terminal-header {
+          padding: 0.5rem 1rem;
+          background-color: var(--medium-gray);
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          border-bottom: 1px solid var(--green);
+        }
+
+        .terminal-dots {
+          display: flex;
+          gap: 0.5rem;
+        }
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+
+        .green { background-color: var(--green); }
+
+        .terminal-title {
+          font-size: 0.85rem;
+          opacity: 0.9;
+        }
+
+        .terminal-body {
+          padding: 1.5rem;
+          font-family: 'IBM Plex Mono', monospace;
+        }
+
+        h2 {
+          color: var(--green);
+          border-bottom: 1px solid var(--medium-gray);
+          padding-bottom: 0.5rem;
+        }
+
+        h3 {
+          color: var(--green);
+          margin-top: 1.5rem;
+        }
+
+        ul, ol {
+          margin-left: 1.5rem;
+        }
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          margin: 1rem 0;
+        }
+
+        strong {
+          color: var(--light-gray);
+        }
+
+        /* Metric Explanation Styles */
         .explicacao-metrica {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #eee;
+          background: var(--dark-gray);
+          padding: 1.5rem;
+          border-radius: 8px;
+          margin-bottom: 2rem;
+          border: 1px solid var(--medium-gray);
         }
+
         .niveis-seguranca {
-            margin: 15px 0;
+          margin: 1rem 0;
         }
+
         .nivel {
-            padding: 8px 12px;
-            margin: 5px 0;
-            background: white;
-            border-radius: 0 4px 4px 0;
+          padding: 0.8rem 1rem;
+          margin: 0.5rem 0;
+          background: var(--black);
+          border-radius: 0 4px 4px 0;
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 0.9rem;
         }
+
         .dica {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            font-style: italic;
+          font-size: 0.85rem;
+          color: var(--light-gray);
+          font-style: italic;
+          opacity: 0.8;
+        }
+
+        .data-atualizacao {
+          text-align: right;
+          color: var(--light-gray);
+          font-style: italic;
+          font-size: 0.85rem;
+          opacity: 0.7;
         }
     </style>
 </head>
 <body>
-    <div class="explicacao-metrica">
-        <h2>Como calculamos a segurança do local</h2>
-        <p>Nossa métrica compara o número de ocorrências no bairro com a média da cidade:</p>
-        
-        <div class="niveis-seguranca">
-            <div class="nivel" style="border-left: 4px solid #2ecc71;">
-                <strong>✅✅ Muito seguro</strong> - Valor abaixo de 25% da média
-            </div>
-            <div class="nivel" style="border-left: 4px solid #27ae60;">
-                <strong>✅ Seguro</strong> - Entre 25% e 100% da média
-            </div>
-            <div class="nivel" style="border-left: 4px solid #bdc3c7;">
-                <strong>➖ Média</strong> - Próximo da média da cidade (±10%)
-            </div>
-            <div class="nivel" style="border-left: 4px solid #e67e22;">
-                <strong>⚠️ Alerta</strong> - Entre 100% e 400% da média
-            </div>
-            <div class="nivel" style="border-left: 4px solid #e74c3c;">
-                <strong>⚠️⚠️ Risco crítico</strong> - Acima de 400% da média
-            </div>
-        </div>
+    <div class="terminal-theme">
+        <main class="main-content">
+            <section class="extension-info">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">Termos de uso</span>
+                    </div>
+                    
+                    <div class="terminal-body">
+                        <!-- Metric Explanation -->
+                        <div class="explicacao-metrica">
+                            <h2>Como calculamos a segurança do local</h2>
+                            <p>Nossa métrica compara o número de ocorrências no bairro com a média da cidade:</p>
+                            
+                            <div class="niveis-seguranca">
+                                <div class="nivel" style="border-left: 4px solid var(--green);">
+                                    <strong>✅✅ Muito seguro</strong> - Valor abaixo de 25% da média
+                                </div>
+                                <div class="nivel" style="border-left: 4px solid var(--dark-green);">
+                                    <strong>✅ Seguro</strong> - Entre 25% e 100% da média
+                                </div>
+                                <div class="nivel" style="border-left: 4px solid var(--medium-gray);">
+                                    <strong>➖ Média</strong> - Próximo da média da cidade (±10%)
+                                </div>
+                                <div class="nivel" style="border-left: 4px solid #e67e22;">
+                                    <strong>⚠️ Alerta</strong> - Entre 100% e 400% da média
+                                </div>
+                                <div class="nivel" style="border-left: 4px solid #e74c3c;">
+                                    <strong>⚠️⚠️ Risco crítico</strong> - Acima de 400% da média
+                                </div>
+                            </div>
 
-        <p class="dica">Os dados são calculados comparando a quantidade de ocorrências no bairro com a média de ocorrências nos bairros da mesma cidade.</p>
+                            <p class="dica">Os dados são calculados comparando a quantidade de ocorrências no bairro com a média de ocorrências nos bairros da mesma cidade.</p>
+                        </div>
+
+                        <h2>Termos de Uso e Isenção de Responsabilidade de nossos serviços</h2>
+  
+                        <h3>1. Não Afiliação e Uso Independente</h3>
+                        <p>Os serviços da Databasing são independente e <strong>não possuem vínculo</strong> com sites de terceiros, Secretarias de Segurança Pública (SSP) ou quaisquer órgãos privados e/ou governamentais. O propósito da Databasing é exclusivamente de acesso a informação.</p>
+  
+                        <h3>2. Fonte e Limitações dos Dados</h3>
+                        <p>Os dados usados nos serviços da Databasing são públicos, preferencialmente dados distribuídos por órgãos públicos e/ou governamentais, sem intervenção dos desenvolvedores.</p>
+                        <ul>
+                            <li><strong>Não garantimos precisão, completude ou atualização</strong> das informações.</li>
+                            <li><strong>Podem existir discrepâncias</strong> visto que os dados podem não ser atualizados em tempo real pelos órgãos que os distribuem. Nos empenhamos e trazer sempre o mais recente publicado.</li>
+                        </ul>
+  
+                        <h3>3. Responsabilidade Exclusiva do Usuário</h3>
+                        <p>Ao utilizar nossos serviços, você <strong>concorda e assume</strong> que:</p>
+                        <ul>
+                            <li><strong>Todas as decisões</strong> (ex.: alugar, comprar, avaliar riscos) são de sua responsabilidade.</li>
+                            <li><strong>Não substitui consultas oficiais</strong></li>
+                            <li><strong>Reconhece os riscos</strong> de confiar em dados automatizados, que podem incluir erros técnicos ou defasagens.</li>
+                        </ul>
+  
+                        <h3>4. Isenção Total de Culpa aos Desenvolvedores</h3>
+                        <p>Os criadores das soluções <strong>não são responsáveis</strong>:</p>
+                        <ul>
+                            <li>Por danos materiais, morais ou financeiros decorrentes do uso dos dados.</li>
+                            <li>Por falhas técnicas, inexatidões ou indisponibilidade temporária das informações.</li>
+                            <li>Por ações de terceiros (ex.: proprietários, corretores, etc) que se sintam prejudicados pelo uso dos nossos serviços.</li>
+                        </ul>
+  
+                        <h3>5. Proibição de Uso Indevido</h3>
+                        <p>Você <strong>concorda em não utilizar nossos serviços</strong> para:</p>
+                        <ul>
+                            <li>Praticar discriminação ou preconceito contra regiões, indivíduos, órgãos públicos e privados.</li>
+                            <li>Gerar alarme público sem verificação prévia com fontes oficiais.</li>
+                            <li>Violar políticas de terceiros ou de leis locais/nacionais por meio dos nossos serviços.</li>
+                        </ul>
+  
+                        <h3>6. Indenização e Defesa Legal</h3>
+                        <p>Você <strong>assume total responsabilidade</strong> pelo uso dos nossos serviços e concorda em isentar os desenvolvedores de qualquer reclamação, processo ou custo judicial decorrente desse uso. Os desenvolvedores não se responsabilizam por qualquer dano, prejuízo ou disputa legal envolvendo terceiros, decorrente da utilização dos nossos serviços pelo usuário.</p>
+  
+                        <h3>7. Alterações e Aceitação</h3>
+                        <p>Estes termos podem ser modificados sem aviso. O uso contínuo dos nossos serviços implica <strong>aceitação irrestrita das condições vigentes</strong>.</p>
+  
+                        <h3>Avisos Finais</h3>
+                        <ol>
+                            <li>Nossos serviços <strong>não modificam</strong> sites ou serviços de terceiros, apenas fornecem informações referentes a dados já públicos e/ou governamentais.</li>
+                            <li>Os órgãos públicos responsáveis pelos dados de origem <strong>não endossam ou validam</strong> nossos serviços - os dados são utilizados conforme disponibilizados publicamente.</li>
+                            <li>Para decisões críticas, <strong>sempre consulte registros oficiais</strong> e profissionais qualificados.</li>
+                        </ol>
+  
+                        <p class="data-atualizacao">Última atualização: 02/03/2025</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-
-    <h1>Termos de Uso e Isenção de Responsabilidade da Extensão "minha rua segura"</h1>
-
-    <h2>1. Não Afiliação e Uso Independente</h2>
-    <p>A extensão <strong>minha rua segura</strong> é um projeto independente e <strong>não possui vínculo</strong> com o site <strong>Quinto Andar</strong>, a <strong>Secretaria de Segurança Pública do Estado de São Paulo (SSP-SP)</strong> ou quaisquer órgãos governamentais. Seu propósito é exclusivamente informativo.</p>
-
-    <h2>2. Fonte e Limitações dos Dados</h2>
-    <p>Os dados sobre furtos exibidos são obtidos <strong>automaticamente</strong> de registros públicos disponibilizados pela <strong>SSP-SP</strong>, sem intervenção manual ou curadoria dos desenvolvedores. Por serem dependentes de atualizações terceiras:</p>
-    <ul>
-        <li><strong>Não garantimos precisão, completude ou atualização</strong> das informações.</li>
-        <li><strong>Podem existir discrepâncias</strong> visto que os dados de furtos não são atualizados em tempo real pelo SSP-SP. Os dados presentes no momento são apenas referentes ao ano de 2024. Além disso, até o presente momento, apenas dados relacionados a celulares furtados são usados como indicativo de segurança.</li>
-    </ul>
-
-    <h2>3. Responsabilidade Exclusiva do Usuário</h2>
-    <p>Ao utilizar a extensão, você <strong>concorda e assume</strong> que:</p>
-    <ul>
-        <li><strong>Todas as decisões</strong> (ex.: alugar, comprar, avaliar riscos) são de sua responsabilidade.</li>
-        <li><strong>Não substitui consultas oficiais</strong>: recomenda-se validar dados diretamente no <a href="https://www.ssp.sp.gov.br/" target="_blank">portal da SSP-SP</a> ou com autoridades locais.</li>
-        <li><strong>Reconhece os riscos</strong> de confiar em dados automatizados, que podem incluir erros técnicos ou defasagens.</li>
-    </ul>
-
-    <h2>4. Isenção Total de Culpa aos Desenvolvedores</h2>
-    <p>Os criadores da extensão <strong>não são responsáveis</strong>:</p>
-    <ul>
-        <li>Por danos materiais, morais ou financeiros decorrentes do uso dos dados.</li>
-        <li>Por falhas técnicas, inexatidões ou indisponibilidade temporária das informações.</li>
-        <li>Por ações de terceiros (ex.: proprietários, corretores) que se sintam prejudicados pelo uso da extensão.</li>
-    </ul>
-
-    <h2>5. Proibição de Uso Indevido</h2>
-    <p>Você <strong>concorda em não utilizar a extensão</strong> para:</p>
-    <ul>
-        <li>Praticar discriminação ou preconceito contra regiões ou indivíduos.</li>
-        <li>Gerar alarme público sem verificação prévia com fontes oficiais.</li>
-        <li>Violar políticas do Quinto Andar ou leis locais/nacionais.</li>
-    </ul>
-
-    <h2>6. Indenização e Defesa Legal</h2>
-    <p>Você <strong>assume total responsabilidade</strong> pelo uso da extensão e concorda em isentar o desenvolvedor de qualquer reclamação, processo ou custo judicial decorrente desse uso. O desenvolvedor não se responsabiliza por qualquer dano, prejuízo ou disputa legal envolvendo o Quinto Andar, a SSP-SP ou terceiros decorrente da utilização da extensão pelo usuário.</p>
-    
-    <h2>7. Alterações e Aceitação</h2>
-    <p>Estes termos podem ser modificados sem aviso. O uso contínuo da extensão implica <strong>aceitação irrestrita das condições vigentes</strong>.</p>
-
-    <div class="aviso-final">
-        <h3>Avisos Finais</h3>
-        <ol>
-            <li>A extensão <strong>não modifica</strong> o site do Quinto Andar, apenas exibe dados complementares.</li>
-            <li>A SSP-SP <strong>não endossa ou valida</strong> esta extensão - os dados são utilizados conforme disponibilizados publicamente.</li>
-            <li>Para decisões críticas, <strong>sempre consulte registros oficiais</strong> e profissionais qualificados.</li>
-        </ol>
-    </div>
-
-    <p class="data-atualizacao">Última atualização: 02/03/2025</p>
 </body>
 </html>
