@@ -21,9 +21,55 @@
         .data-atualizacao { text-align: right; font-style: italic; color: #666; }
         a { color: #2980b9; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .explicacao-metrica {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+        }
+        .niveis-seguranca {
+            margin: 15px 0;
+        }
+        .nivel {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 0 4px 4px 0;
+        }
+        .dica {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
+    <div class="explicacao-metrica">
+        <h2>Como calculamos a segurança do local</h2>
+        <p>Nossa métrica compara o número de ocorrências no bairro com a média da cidade:</p>
+        
+        <div class="niveis-seguranca">
+            <div class="nivel" style="border-left: 4px solid #2ecc71;">
+                <strong>✅✅ Muito seguro</strong> - Valor abaixo de 25% da média
+            </div>
+            <div class="nivel" style="border-left: 4px solid #27ae60;">
+                <strong>✅ Seguro</strong> - Entre 25% e 100% da média
+            </div>
+            <div class="nivel" style="border-left: 4px solid #bdc3c7;">
+                <strong>➖ Média</strong> - Próximo da média da cidade (±10%)
+            </div>
+            <div class="nivel" style="border-left: 4px solid #e67e22;">
+                <strong>⚠️ Alerta</strong> - Entre 100% e 400% da média
+            </div>
+            <div class="nivel" style="border-left: 4px solid #e74c3c;">
+                <strong>⚠️⚠️ Risco crítico</strong> - Acima de 400% da média
+            </div>
+        </div>
+
+        <p class="dica">Os dados são calculados comparando a quantidade de ocorrências no bairro com a média de ocorrências nos bairros da mesma cidade.</p>
+    </div>
+
     <h1>Termos de Uso e Isenção de Responsabilidade da Extensão "minha rua segura"</h1>
 
     <h2>1. Não Afiliação e Uso Independente</h2>
@@ -62,6 +108,7 @@
 
     <h2>6. Indenização e Defesa Legal</h2>
     <p>Você <strong>assume total responsabilidade</strong> pelo uso da extensão e concorda em isentar o desenvolvedor de qualquer reclamação, processo ou custo judicial decorrente desse uso. O desenvolvedor não se responsabiliza por qualquer dano, prejuízo ou disputa legal envolvendo o Quinto Andar, a SSP-SP ou terceiros decorrente da utilização da extensão pelo usuário.</p>
+    
     <h2>7. Alterações e Aceitação</h2>
     <p>Estes termos podem ser modificados sem aviso. O uso contínuo da extensão implica <strong>aceitação irrestrita das condições vigentes</strong>.</p>
 
