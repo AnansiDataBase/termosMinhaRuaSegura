@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Termos de Uso - Minha Rua Segura</title>
+    <title>Termos de Uso - Databasing</title>
     <style>
         :root {
           --green: #00ff9d;
@@ -21,17 +21,67 @@
             color: var(--white);
             line-height: 1.6;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .terminal-theme {
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
+        /* Header Styles */
+        .header {
+            background-color: var(--dark-gray);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--green);
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            color: var(--green);
+        }
+
+        .subtitle {
+            margin: 0.5rem 0 0;
+            color: var(--light-gray);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Contribuição Section */
+        .contribuicao {
+            background-color: var(--dark-gray);
+            padding: 1.5rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            border-radius: 8px;
+            border: 1px solid var(--medium-gray);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .contribuicao-texto {
+            flex: 1;
+        }
+
+        .contribuicao-qrcode {
+            width: 100px;
+            height: 100px;
+            background-color: var(--white);
+            border: 1px solid var(--medium-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 0.5rem;
         }
 
         .main-content {
           flex: 1;
-          padding: 2rem;
+          padding: 0 2rem 2rem;
           max-width: 800px;
           margin: 0 auto;
           width: 100%;
@@ -41,7 +91,7 @@
           background-color: var(--dark-gray);
           border: 1px solid var(--medium-gray);
           border-radius: 8px;
-          margin: 2rem 0;
+          margin: 1rem 0 2rem;
           overflow: hidden;
           box-shadow: 0 4px 12px rgba(0, 255, 157, 0.1);
         }
@@ -141,101 +191,139 @@
           font-size: 0.85rem;
           opacity: 0.7;
         }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--dark-gray);
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 1px solid var(--medium-gray);
+            font-size: 0.9rem;
+            color: var(--light-gray);
+        }
+
+        .footer a {
+            color: var(--green);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="terminal-theme">
-        <main class="main-content">
-            <section class="extension-info">
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot green"></span>
-                        </div>
-                        <span class="terminal-title">Termos de uso</span>
-                    </div>
-                    
-                    <div class="terminal-body">
-                        <!-- Metric Explanation -->
-                        <div class="explicacao-metrica">
-                            <h2>Como calculamos a segurança do local</h2>
-                            <p>Nossa métrica compara o número de ocorrências no bairro com a média da cidade:</p>
-                            
-                            <div class="niveis-seguranca">
-                                <div class="nivel" style="border-left: 4px solid var(--green);">
-                                    <strong>✅✅ Muito seguro</strong> - Valor abaixo de 25% da média
-                                </div>
-                                <div class="nivel" style="border-left: 4px solid var(--dark-green);">
-                                    <strong>✅ Seguro</strong> - Entre 25% e 100% da média
-                                </div>
-                                <div class="nivel" style="border-left: 4px solid var(--medium-gray);">
-                                    <strong>➖ Média</strong> - Próximo da média da cidade (±10%)
-                                </div>
-                                <div class="nivel" style="border-left: 4px solid #e67e22;">
-                                    <strong>⚠️ Alerta</strong> - Entre 100% e 400% da média
-                                </div>
-                                <div class="nivel" style="border-left: 4px solid #e74c3c;">
-                                    <strong>⚠️⚠️ Risco crítico</strong> - Acima de 400% da média
-                                </div>
-                            </div>
+    <header class="header">
+        <h1>Databasing</h1>
+        <p class="subtitle">Transformando dados em insights</p>
+    </header>
 
-                            <p class="dica">Os dados são calculados comparando a quantidade de ocorrências no bairro com a média de ocorrências nos bairros da mesma cidade.</p>
-                        </div>
-
-                        <h2>Termos de Uso e Isenção de Responsabilidade de nossos serviços</h2>
-  
-                        <h3>1. Não Afiliação e Uso Independente</h3>
-                        <p>Os serviços da Databasing são independente e <strong>não possuem vínculo</strong> com sites de terceiros, Secretarias de Segurança Pública (SSP) ou quaisquer órgãos privados e/ou governamentais. O propósito da Databasing é exclusivamente de acesso a informação.</p>
-  
-                        <h3>2. Fonte e Limitações dos Dados</h3>
-                        <p>Os dados usados nos serviços da Databasing são públicos, preferencialmente dados distribuídos por órgãos públicos e/ou governamentais, sem intervenção dos desenvolvedores.</p>
-                        <ul>
-                            <li><strong>Não garantimos precisão, completude ou atualização</strong> das informações.</li>
-                            <li><strong>Podem existir discrepâncias</strong> visto que os dados podem não ser atualizados em tempo real pelos órgãos que os distribuem. Nos empenhamos e trazer sempre o mais recente publicado.</li>
-                        </ul>
-  
-                        <h3>3. Responsabilidade Exclusiva do Usuário</h3>
-                        <p>Ao utilizar nossos serviços, você <strong>concorda e assume</strong> que:</p>
-                        <ul>
-                            <li><strong>Todas as decisões</strong> (ex.: alugar, comprar, avaliar riscos) são de sua responsabilidade.</li>
-                            <li><strong>Não substitui consultas oficiais</strong></li>
-                            <li><strong>Reconhece os riscos</strong> de confiar em dados automatizados, que podem incluir erros técnicos ou defasagens.</li>
-                        </ul>
-  
-                        <h3>4. Isenção Total de Culpa aos Desenvolvedores</h3>
-                        <p>Os criadores das soluções <strong>não são responsáveis</strong>:</p>
-                        <ul>
-                            <li>Por danos materiais, morais ou financeiros decorrentes do uso dos dados.</li>
-                            <li>Por falhas técnicas, inexatidões ou indisponibilidade temporária das informações.</li>
-                            <li>Por ações de terceiros (ex.: proprietários, corretores, etc) que se sintam prejudicados pelo uso dos nossos serviços.</li>
-                        </ul>
-  
-                        <h3>5. Proibição de Uso Indevido</h3>
-                        <p>Você <strong>concorda em não utilizar nossos serviços</strong> para:</p>
-                        <ul>
-                            <li>Praticar discriminação ou preconceito contra regiões, indivíduos, órgãos públicos e privados.</li>
-                            <li>Gerar alarme público sem verificação prévia com fontes oficiais.</li>
-                            <li>Violar políticas de terceiros ou de leis locais/nacionais por meio dos nossos serviços.</li>
-                        </ul>
-  
-                        <h3>6. Indenização e Defesa Legal</h3>
-                        <p>Você <strong>assume total responsabilidade</strong> pelo uso dos nossos serviços e concorda em isentar os desenvolvedores de qualquer reclamação, processo ou custo judicial decorrente desse uso. Os desenvolvedores não se responsabilizam por qualquer dano, prejuízo ou disputa legal envolvendo terceiros, decorrente da utilização dos nossos serviços pelo usuário.</p>
-  
-                        <h3>7. Alterações e Aceitação</h3>
-                        <p>Estes termos podem ser modificados sem aviso. O uso contínuo dos nossos serviços implica <strong>aceitação irrestrita das condições vigentes</strong>.</p>
-  
-                        <h3>Avisos Finais</h3>
-                        <ol>
-                            <li>Nossos serviços <strong>não modificam</strong> sites ou serviços de terceiros, apenas fornecem informações referentes a dados já públicos e/ou governamentais.</li>
-                            <li>Os órgãos públicos responsáveis pelos dados de origem <strong>não endossam ou validam</strong> nossos serviços - os dados são utilizados conforme disponibilizados publicamente.</li>
-                            <li>Para decisões críticas, <strong>sempre consulte registros oficiais</strong> e profissionais qualificados.</li>
-                        </ol>
-  
-                        <p class="data-atualizacao">Última atualização: 02/03/2025</p>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="contribuicao">
+        <div class="contribuicao-texto">
+            <h3 style="color: var(--green); margin-top: 0;">Caso queira contribuir com o projeto</h3>
+            <p>Escaneie este QR code para apoiar o projeto e ajudar a melhorar nossos serviços.</p>
+        </div>
+        <div class="contribuicao-qrcode">
+            <!-- Substitua esta div pela sua imagem de QR code -->
+            <img src="qr.jpg" alt="QR Code para contribuição" style="width:100%; height:auto;">
+        </div>
     </div>
+
+    <div class="main-content">
+        <section class="extension-info">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">Termos de uso</span>
+                </div>
+                
+                <div class="terminal-body">
+                    <!-- Metric Explanation -->
+                    <div class="explicacao-metrica">
+                        <h2>Como calculamos a segurança do local</h2>
+                        <p>Nossa métrica compara o número de ocorrências no bairro com a média da cidade:</p>
+                        
+                        <div class="niveis-seguranca">
+                            <div class="nivel" style="border-left: 4px solid var(--green);">
+                                <strong>✅✅ Muito seguro</strong> - Valor abaixo de 25% da média
+                            </div>
+                            <div class="nivel" style="border-left: 4px solid var(--dark-green);">
+                                <strong>✅ Seguro</strong> - Entre 25% e 100% da média
+                            </div>
+                            <div class="nivel" style="border-left: 4px solid var(--medium-gray);">
+                                <strong>➖ Média</strong> - Próximo da média da cidade (±10%)
+                            </div>
+                            <div class="nivel" style="border-left: 4px solid #e67e22;">
+                                <strong>⚠️ Alerta</strong> - Entre 100% e 400% da média
+                            </div>
+                            <div class="nivel" style="border-left: 4px solid #e74c3c;">
+                                <strong>⚠️⚠️ Risco crítico</strong> - Acima de 400% da média
+                            </div>
+                        </div>
+
+                        <p class="dica">Os dados são calculados comparando a quantidade de ocorrências no bairro com a média de ocorrências nos bairros da mesma cidade.</p>
+                    </div>
+
+                    <h2>Termos de Uso e Isenção de Responsabilidade de nossos serviços</h2>
+  
+                    <h3>1. Não Afiliação e Uso Independente</h3>
+                    <p>Os serviços da Databasing são independente e <strong>não possuem vínculo</strong> com sites de terceiros, Secretarias de Segurança Pública (SSP) ou quaisquer órgãos privados e/ou governamentais. O propósito da Databasing é exclusivamente de acesso a informação.</p>
+  
+                    <h3>2. Fonte e Limitações dos Dados</h3>
+                    <p>Os dados usidos nos serviços da Databasing são públicos, preferencialmente dados distribuídos por órgãos públicos e/ou governamentais, sem intervenção dos desenvolvedores.</p>
+                    <ul>
+                        <li><strong>Não garantimos precisão, completude ou atualização</strong> das informações.</li>
+                        <li><strong>Podem existir discrepâncias</strong> visto que os dados podem não ser atualizados em tempo real pelos órgãos que os distribuem. Nos empenhamos e trazer sempre o mais recente publicado.</li>
+                    </ul>
+  
+                    <h3>3. Responsabilidade Exclusiva do Usuário</h3>
+                    <p>Ao utilizar nossos serviços, você <strong>concorda e assume</strong> que:</p>
+                    <ul>
+                        <li><strong>Todas as decisões</strong> (ex.: alugar, comprar, avaliar riscos) são de sua responsabilidade.</li>
+                        <li><strong>Não substitui consultas oficiais</strong></li>
+                        <li><strong>Reconhece os riscos</strong> de confiar em dados automatizados, que podem incluir erros técnicos ou defasagens.</li>
+                    </ul>
+  
+                    <h3>4. Isenção Total de Culpa aos Desenvolvedores</h3>
+                    <p>Os criadores das soluções <strong>não são responsáveis</strong>:</p>
+                    <ul>
+                        <li>Por danos materiais, morais ou financeiros decorrentes do uso dos dados.</li>
+                        <li>Por falhas técnicas, inexatidões ou indisponibilidade temporária das informações.</li>
+                        <li>Por ações de terceiros (ex.: proprietários, corretores, etc) que se sintam prejudicados pelo uso dos nossos serviços.</li>
+                    </ul>
+  
+                    <h3>5. Proibição de Uso Indevido</h3>
+                    <p>Você <strong>concorda em não utilizar nossos serviços</strong> para:</p>
+                    <ul>
+                        <li>Praticar discriminação ou preconceito contra regiões, indivíduos, órgãos públicos e privados.</li>
+                        <li>Gerar alarme público sem verificação prévia com fontes oficiais.</li>
+                        <li>Violar políticas de terceiros ou de leis locais/nacionais por meio dos nossos serviços.</li>
+                    </ul>
+  
+                    <h3>6. Indenização e Defesa Legal</h3>
+                    <p>Você <strong>assume total responsabilidade</strong> pelo uso dos nossos serviços e concorda em isentar os desenvolvedores de qualquer reclamação, processo ou custo judicial decorrente desse uso. Os desenvolvedores não se responsabilizam por qualquer dano, prejuízo ou disputa legal envolvendo terceiros, decorrente da utilização dos nossos serviços pelo usuário.</p>
+  
+                    <h3>7. Alterações e Aceitação</h3>
+                    <p>Estes termos podem ser modificados sem aviso. O uso contínuo dos nossos serviços implica <strong>aceitação irrestrita das condições vigentes</strong>.</p>
+  
+                    <h3>Avisos Finais</h3>
+                    <ol>
+                        <li>Nossos serviços <strong>não modificam</strong> sites ou serviços de terceiros, apenas fornecem informações referentes a dados já públicos e/ou governamentais.</li>
+                        <li>Os órgãos públicos responsáveis pelos dados de origem <strong>não endossam ou validam</strong> nossos serviços - os dados são utilizados conforme disponibilizados publicamente.</li>
+                        <li>Para decisões críticas, <strong>sempre consulte registros oficiais</strong> e profissionais qualificados.</li>
+                    </ol>
+  
+                    <p class="data-atualizacao">Última atualização: 02/03/2025</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Contato: <a href="mailto:contato@databasing.com.br">contato@databasing.com.br</a></p>
+        <p>Databasing &copy; 2025 - Transformando dados em insights</p>
+    </footer>
 </body>
 </html>
